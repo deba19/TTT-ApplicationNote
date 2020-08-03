@@ -19,6 +19,7 @@
   "homepage": "https://github.com/deba19/TTT-ApplicationNote#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "request": "^2.88.2"
   }
 }
