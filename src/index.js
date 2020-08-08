@@ -57,6 +57,7 @@ request.get('https://terriblytinytales.com/test.txt','utf8',(err,res,data)=>{
     }
     var wordsArray = splitByWords(data);
     var wordsMap = createWordMap(wordsArray);
+  
     finalWordsArray = sortByCount(wordsMap)
 })
 let finalArray=[]
