@@ -6,7 +6,9 @@ const path= require('path')
 const server=http.createServer(app)
 const port = process.env.PORT || 3000
 const publicDirectoryPath= path.join(__dirname, '../public')
+app.set('view engine', 'hbs')
 app.use(express.static(publicDirectoryPath))
+app.use(express.urlencoded({extended:true}))
 
 //Function to count frequency of each word
 function createWordMap (wordsArray) 
@@ -53,15 +55,30 @@ request.get('https://terriblytinytales.com/test.txt','utf8',(err,res,data)=>{
     {
         console.log("Give URL is invalid")
     }
-    //console.log(data)
-    
     var wordsArray = splitByWords(data);
     var wordsMap = createWordMap(wordsArray);
-    var finalWordsArray = sortByCount(wordsMap);
-    console.log(finalWordsArray)
-    
+    finalWordsArray = sortByCount(wordsMap)
 })
-
+let finalArray=[]
+app.get('/home',(req,res)=>{
+   //finalArray=[]
+   res.render('home',{
+     finalArray
+   })
+   //console.log(x)
+})
+app.post('/home',(req,res)=>{
+  //res.send(finalWordsArray)
+  let newnum=req.body.newnum
+  
+  for(var i=0;i<newnum;i++)
+  {
+    finalArray.push(finalWordsArray[i])
+  }
+  console.log(newnum)
+  res.redirect('/home')
+  //finalArray=[]
+})
 server.listen(port,()=>
 {
     console.log('Server is up on ',port)
