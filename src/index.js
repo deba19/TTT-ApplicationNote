@@ -62,22 +62,31 @@ request.get('https://terriblytinytales.com/test.txt','utf8',(err,res,data)=>{
 })
 let finalArray=[]
 let newnum
+let msg=""
 app.get('/home',(req,res)=>{
   
    res.render('home',{
      finalArray,
-     newnum
+     newnum,
+     msg
    })
    //console.log(x)
 })
 app.post('/home',(req,res)=>{
   //res.send(finalWordsArray)
    newnum=req.body.newnum
-  finalArray=[]
-  for(var i=0;i<newnum;i++)
-  {
-    finalArray.push(finalWordsArray[i])
-  }
+   if(newnum<0)
+   msg="Please enter a positive number"
+   else if(newnum==0)
+   msg="As the number is 0, we cannot show you any word"
+   else
+    {
+      finalArray=[]
+      for(var i=0;i<newnum;i++)
+      {
+        finalArray.push(finalWordsArray[i])
+      }
+    }
   console.log(newnum)
   res.redirect('/home')
 })
