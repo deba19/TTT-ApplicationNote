@@ -60,16 +60,18 @@ request.get('https://terriblytinytales.com/test.txt','utf8',(err,res,data)=>{
     finalWordsArray = sortByCount(wordsMap)
 })
 let finalArray=[]
+let newnum
 app.get('/home',(req,res)=>{
-   //finalArray=[]
+  
    res.render('home',{
-     finalArray
+     finalArray,
+     newnum
    })
    //console.log(x)
 })
 app.post('/home',(req,res)=>{
   //res.send(finalWordsArray)
-  let newnum=req.body.newnum
+   newnum=req.body.newnum
   
   for(var i=0;i<newnum;i++)
   {
@@ -77,7 +79,6 @@ app.post('/home',(req,res)=>{
   }
   console.log(newnum)
   res.redirect('/home')
-  //finalArray=[]
 })
 server.listen(port,()=>
 {

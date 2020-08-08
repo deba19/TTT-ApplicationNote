@@ -7,21 +7,39 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
+    <link rel="stylesheet" type="text/css" href="./CSS/home.css">
     <title>Welcome to application note</title>
-    
   </head>
   <body>
-    
+   <div class="headers">
+     <h2>Welcome to Frequency Checker Website</h2>
+   </div>
     <form action="" method="POST">
       <input name="newnum" type="number" placeholder="Enter a number">
-      <button type="submit">Submit</button>
+      <button type="submit" onclick="clearSc()">Submit</button>
     </form>
-    <ul> 
+    <div class="inputnum">
+      <h5>You Entered Number is : </h5>
+      {{newnum}}
+    </div>
+    <div id="out">
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th>Word</th>
+          <th>Frequency</th>
+        </tr>
+      </thead>
+      <tbody>
       {{#each finalArray as |fa|}}
-        <li>{{fa.name}} {{fa.total}}</li>
+        <tr>
+          <td>{{fa.name}}</td>
+          <td>{{fa.total}}</td>
+        </tr>
       {{/each}}
-    </ul>
+     </tbody>
+    </table>
+    </div>
 
     
 
