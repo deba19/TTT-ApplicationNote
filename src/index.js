@@ -73,7 +73,7 @@ app.get('/home',(req,res)=>{
 app.post('/home',(req,res)=>{
   //res.send(finalWordsArray)
    newnum=req.body.newnum
-  
+  finalArray=[]
   for(var i=0;i<newnum;i++)
   {
     finalArray.push(finalWordsArray[i])
