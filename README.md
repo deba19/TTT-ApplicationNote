@@ -20,7 +20,17 @@ Because, in src/index.js, we have assigned port 3000 for this project.
 
 Next, you have to provide a number **N** in the input field, the application will return you first **N** words in decending orders of frequency, that are present in the file https://terriblytinytales.com/test.txt 
 
+
+### Where to find live website?
+This website is deployed on AWS. One can find and check working of the website by visiting this link:
+    ''
+
 ### Sample input and output of the project
+
+    1. When value of **N** is 0
+    ![Screenshot1](sample_output/zero.png)
+    2. When value of **N** is greater than 0
+    ![Screenshot2](sample_output/big.png)
 
 ### Project architecture 
     1. "Node" Modules Folder
@@ -40,6 +50,11 @@ Next, you have to provide a number **N** in the input field, the application wil
     6. package.json
 
     7. package-lock.json
+
+### Project deployment on AWS
+This project is deployed on AWS. I have pulled a node image from Dockerhub, then created a dockerhub using that. Dockerfile that is used there, is present in the project folder.
+A Docker container is always running on AWS EC2 instance.
+
 
 ### Basic implementation idea of the the project
 In src/index.js,
