@@ -28,9 +28,9 @@ This website is deployed on AWS. One can find and check working of the website b
 ### Sample input and output of the project
 
     1. When value of **N** is 0
-    ![Screenshot1](sample_output/zero.png)
+    ![Screenshot1](./sample_output/zero.png)
     2. When value of **N** is greater than 0
-    ![Screenshot2](sample_output/big.png)
+    ![Screenshot2](./sample_output/big.png)
 
 ### Project architecture 
     1. "Node" Modules Folder
