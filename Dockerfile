@@ -6,5 +6,5 @@ RUN npm install
 
 EXPOSE 3000
 
-ENTRYPOINT [ "npm run" ]
-CMD [ "index.js"]
+ENTRYPOINT [ "node" ]
+CMD [ "src/index.js"]
