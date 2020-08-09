@@ -23,7 +23,7 @@ Next, you have to provide a number **N** in the input field, the application wil
 
 ### Where to find live website?
 This website is deployed on AWS. One can find and check working of the website by visiting this link:
-    ''
+    ' http://15.206.81.144:3000/home '
 
 ### Sample input and output of the project
 
