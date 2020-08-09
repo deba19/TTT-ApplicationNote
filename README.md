@@ -52,8 +52,7 @@ This website is deployed on AWS. One can find and check working of the website b
     7. package-lock.json
 
 ### Project deployment on AWS
-This project is deployed on AWS. I have pulled a node image from Dockerhub, then created a dockerhub using that. Dockerfile that is used there, is present in the project folder.
-A Docker container is always running on AWS EC2 instance.
+This project is deployed on AWS. I have pulled a "node" image from Dockerhub. To make an application image, I have created a Dokcerfile that is present in the project folder. Then, I have created and image and ran the image on EC2 instance.
 
 
 ### Basic implementation idea of the the project
